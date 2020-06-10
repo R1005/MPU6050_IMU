@@ -52,10 +52,12 @@ int  MPU6050_IMU::getAngle() {
 void MPU6050_IMU::start() {
   mpu.initialize();
   if (mpu.testConnection() != true) {
-    while (true) {}
+    while (true) {
+    }
   }
   if (mpu.dmpInitialize() != 0) {
-    while (true) {}
+    while (true) {
+    }
   }
   mpu.setXGyroOffset(GY_x);
   mpu.setYGyroOffset(GY_y);
